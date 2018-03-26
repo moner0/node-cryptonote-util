@@ -19,7 +19,7 @@
 #include <boost/filesystem.hpp>
 #include <boost/program_options.hpp>
 
-#include "DaemonCommandsHandler.h"
+#include "Daemon/DaemonCommandsHandler.h"
 
 #include "Common/ScopeExit.h"
 #include "Common/SignalHandler.h"

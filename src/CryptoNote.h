@@ -21,7 +21,7 @@
 #include <boost/variant.hpp>
 #include "CryptoTypes.h"
 
-namespace cryptoNote {
+namespace CryptoNote {
 
 struct BaseInput {
   uint32_t blockIndex;

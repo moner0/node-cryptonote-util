@@ -1,7 +1,3 @@
-// Copyright (c) 2012-2013 The Cryptonote developers
-// Distributed under the MIT/X11 software license, see the accompanying
-// file COPYING or http://www.opensource.org/licenses/mit-license.php.
-
 #pragma once
 
 /* From fe.h */
@@ -90,6 +86,10 @@ void ge_p3_tobytes(unsigned char *, const ge_p3 *);
 extern const ge_precomp ge_base[32][8];
 void ge_scalarmult_base(ge_p3 *, const unsigned char *);
 
+/* From ge_sub.c */
+
+void ge_sub(ge_p1p1 *, const ge_p3 *, const ge_cached *);
+
 /* From ge_tobytes.c */
 
 void ge_tobytes(unsigned char *, const ge_p2 *);
@@ -102,6 +102,7 @@ void sc_reduce(unsigned char *);
 
 void ge_scalarmult(ge_p2 *, const unsigned char *, const ge_p3 *);
 void ge_double_scalarmult_precomp_vartime(ge_p2 *, const unsigned char *, const ge_p3 *, const unsigned char *, const ge_dsmp);
+int ge_check_subgroup_precomp_vartime(const ge_dsmp);
 void ge_mul8(ge_p1p1 *, const ge_p2 *);
 extern const fe fe_ma2;
 extern const fe fe_ma;

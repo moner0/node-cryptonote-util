@@ -1,6 +1,19 @@
-// Copyright (c) 2012-2013 The Cryptonote developers
-// Distributed under the MIT/X11 software license, see the accompanying
-// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+// Copyright (c) 2012-2017, The CryptoNote developers, The Bytecoin developers
+//
+// This file is part of Bytecoin.
+//
+// Bytecoin is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Bytecoin is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with Bytecoin.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
@@ -11,8 +24,8 @@
 #include <stddef.h>
 #include <stdint.h>
 
-#include "common/int-util.h"
-#include "warnings.h"
+#include "../Common/static_assert.h"
+#include "Common/int-util.h"
 
 static inline void *padd(void *p, size_t i) {
   return (char *) p + i;
@@ -22,17 +35,14 @@ static inline const void *cpadd(const void *p, size_t i) {
   return (const char *) p + i;
 }
 
-PUSH_WARNINGS
-DISABLE_VS_WARNINGS(4267)
-//static_assert(sizeof(size_t) == 4 || sizeof(size_t) == 8, "size_t must be 4 or 8 bytes long");
+static_assert(sizeof(size_t) == 4 || sizeof(size_t) == 8, "size_t must be 4 or 8 bytes long");
 static inline void place_length(uint8_t *buffer, size_t bufsize, size_t length) {
   if (sizeof(size_t) == 4) {
-    *(uint32_t *) padd(buffer, bufsize - 4) = swap32be(length);
+    *(uint32_t *) padd(buffer, bufsize - 4) = swap32be((uint32_t) length);
   } else {
     *(uint64_t *) padd(buffer, bufsize - 8) = swap64be(length);
   }
 }
-POP_WARNINGS
 
 #pragma pack(push, 1)
 union hash_state {
@@ -40,7 +50,7 @@ union hash_state {
   uint64_t w[25];
 };
 #pragma pack(pop)
-//static_assert(sizeof(union hash_state) == 200, "Invalid structure size");
+static_assert(sizeof(union hash_state) == 200, "Invalid structure size");
 
 void hash_permutation(union hash_state *state);
 void hash_process(union hash_state *state, const uint8_t *buf, size_t count);
@@ -49,11 +59,13 @@ void hash_process(union hash_state *state, const uint8_t *buf, size_t count);
 
 enum {
   HASH_SIZE = 32,
-  HASH_DATA_AREA = 136
+  HASH_DATA_AREA = 136,
+  SLOW_HASH_CONTEXT_SIZE = 2097552
 };
 
 void cn_fast_hash(const void *data, size_t length, char *hash);
-void cn_slow_hash(const void *data, size_t length, char *hash);
+
+void cn_slow_hash_f(void *, const void *, size_t, void *);
 
 void hash_extra_blake(const void *data, size_t length, char *hash);
 void hash_extra_groestl(const void *data, size_t length, char *hash);

@@ -27,14 +27,15 @@
  * POSSIBILITY OF SUCH DAMAGE.
  * ---------------------------------------------------------------------------
  */
-static const char _NR[] = {
-	0x4e,0x61,0x62,0x69,0x6c,0x20,0x53,0x2e,0x20,
-	0x41,0x6c,0x20,0x52,0x61,0x6d,0x6c,0x69,0x00 };
 
 #include <stddef.h>
 #include <time.h> 
 #include <sys/timeb.h>
+#ifdef __APPLE__
+#include <malloc/malloc.h>
+#else 
 #include <malloc.h>
+#endif
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -63,31 +64,6 @@ static const char _NR[] = {
 #ifndef min
 # define min(a,b) (((a)<(b)) ? (a) : (b))
 #endif /* min */
-
-typedef struct _oaes_key
-{
-	size_t data_len;
-	uint8_t *data;
-	size_t exp_data_len;
-	uint8_t *exp_data;
-	size_t num_keys;
-	size_t key_base;
-} oaes_key;
-
-typedef struct _oaes_ctx
-{
-#ifdef OAES_HAVE_ISAAC
-  randctx * rctx;
-#endif // OAES_HAVE_ISAAC
-
-#ifdef OAES_DEBUG
-	oaes_step_cb step_cb;
-#endif // OAES_DEBUG
-
-	oaes_key * key;
-	OAES_OPTION options;
-	uint8_t iv[OAES_BLOCK_SIZE];
-} oaes_ctx;
 
 // "OAES<8-bit header version><8-bit type><16-bit options><8-bit flags><56-bit reserved>"
 static uint8_t oaes_header[OAES_BLOCK_SIZE] = {
@@ -511,9 +487,9 @@ static uint32_t oaes_get_seed(void)
 	ftime (&timer);
 	gmTimer = gmtime( &timer.time );
 	_test = (char *) calloc( sizeof( char ), timer.millitm );
-	_ret = gmTimer->tm_year + 1900 + gmTimer->tm_mon + 1 + gmTimer->tm_mday +
+	_ret = (uint32_t)(gmTimer->tm_year + 1900 + gmTimer->tm_mon + 1 + gmTimer->tm_mday +
 			gmTimer->tm_hour + gmTimer->tm_min + gmTimer->tm_sec + timer.millitm +
-			(uintptr_t) ( _test + timer.millitm ) + getpid();
+			(uintptr_t) ( _test + timer.millitm ) + getpid());
 
 	if( _test )
 		free( _test );
@@ -694,7 +670,7 @@ OAES_RET oaes_key_export( OAES_CTX * ctx,
 	// header
 	memcpy( data, oaes_header, OAES_BLOCK_SIZE );
 	data[5] = 0x01;
-	data[7] = _ctx->key->data_len;
+	data[7] = (uint8_t)_ctx->key->data_len;
 	memcpy( data + OAES_BLOCK_SIZE, _ctx->key->data, _ctx->key->data_len );
 	
 	return OAES_RET_SUCCESS;
@@ -1287,7 +1263,7 @@ OAES_RET oaes_encrypt( OAES_CTX * ctx,
 		
 		// insert pad
 		for( _j = 0; _j < OAES_BLOCK_SIZE - _block_size; _j++ )
-			_block[ _block_size + _j ] = _j + 1;
+			_block[ _block_size + _j ] = (uint8_t)(_j + 1);
 	
 		// CBC
 		if( _ctx->options & OAES_OPTION_CBC )

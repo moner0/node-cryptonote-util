@@ -1,9 +1,21 @@
-// Copyright (c) 2012-2013 The Cryptonote developers
-// Distributed under the MIT/X11 software license, see the accompanying
-// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+// Copyright (c) 2012-2017, The CryptoNote developers, The Bytecoin developers
+//
+// This file is part of Bytecoin.
+//
+// Bytecoin is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Bytecoin is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with Bytecoin.  If not, see <http://www.gnu.org/licenses/>.
 
-
-#include "base58.h"
+#include "Base58.h"
 
 #include <assert.h>
 #include <string>
@@ -11,12 +23,11 @@
 
 #include "crypto/hash.h"
 #include "int-util.h"
-#include "util.h"
-#include "varint.h"
+#include "Varint.h"
 
-namespace tools
+namespace Tools
 {
-  namespace base58
+  namespace Base58
   {
     namespace
     {
@@ -86,13 +97,13 @@ namespace tools
         uint64_t res = 0;
         switch (9 - size)
         {
-        case 1:            res |= *data++;
-        case 2: res <<= 8; res |= *data++;
-        case 3: res <<= 8; res |= *data++;
-        case 4: res <<= 8; res |= *data++;
-        case 5: res <<= 8; res |= *data++;
-        case 6: res <<= 8; res |= *data++;
-        case 7: res <<= 8; res |= *data++;
+        case 1:            res |= *data++; /* fallthrough */
+        case 2: res <<= 8; res |= *data++; /* fallthrough */
+        case 3: res <<= 8; res |= *data++; /* fallthrough */
+        case 4: res <<= 8; res |= *data++; /* fallthrough */
+        case 5: res <<= 8; res |= *data++; /* fallthrough */
+        case 6: res <<= 8; res |= *data++; /* fallthrough */
+        case 7: res <<= 8; res |= *data++; /* fallthrough */
         case 8: res <<= 8; res |= *data; break;
         default: assert(false);
         }
@@ -110,7 +121,7 @@ namespace tools
 
       void encode_block(const char* block, size_t size, char* res)
       {
-        assert(1 <= size && size <= sizeof(full_block_size));
+        assert(1 <= size && size <= full_block_size);
 
         uint64_t num = uint_8be_to_64(reinterpret_cast<const uint8_t*>(block), size);
         int i = static_cast<int>(encoded_block_sizes[size]) - 1;
@@ -216,7 +227,7 @@ namespace tools
     {
       std::string buf = get_varint_data(tag);
       buf += data;
-      crypto::hash hash = crypto::cn_fast_hash(buf.data(), buf.size());
+      Crypto::Hash hash = Crypto::cn_fast_hash(buf.data(), buf.size());
       const char* hash_data = reinterpret_cast<const char*>(&hash);
       buf.append(hash_data, addr_checksum_size);
       return encode(buf);
@@ -233,11 +244,11 @@ namespace tools
       checksum = addr_data.substr(addr_data.size() - addr_checksum_size);
 
       addr_data.resize(addr_data.size() - addr_checksum_size);
-      crypto::hash hash = crypto::cn_fast_hash(addr_data.data(), addr_data.size());
+      Crypto::Hash hash = Crypto::cn_fast_hash(addr_data.data(), addr_data.size());
       std::string expected_checksum(reinterpret_cast<const char*>(&hash), addr_checksum_size);
       if (expected_checksum != checksum) return false;
 
-      int read = tools::read_varint(addr_data.begin(), addr_data.end(), tag);
+      int read = Tools::read_varint(addr_data.begin(), addr_data.end(), tag);
       if (read <= 0) return false;
 
       data = addr_data.substr(read);

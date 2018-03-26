@@ -58,71 +58,71 @@
 34 verbose addNameRange registry:https://registry.npmjs.org/nan not in flight; fetching
 35 verbose request uri https://registry.npmjs.org/bindings
 36 verbose request no auth needed
-37 info attempt registry request try #1 at 15:39:27
-38 verbose request id 85286c0efa27883f
+37 info attempt registry request try #1 at 15:47:22
+38 verbose request id 474361afe68df91f
 39 verbose etag "5a700cb7-4c53"
 40 verbose lastModified Tue, 30 Jan 2018 6:12:07 GMT
 41 http request GET https://registry.npmjs.org/bindings
 42 verbose request uri https://registry.npmjs.org/nan
 43 verbose request no auth needed
-44 info attempt registry request try #1 at 15:39:27
+44 info attempt registry request try #1 at 15:47:22
 45 verbose etag "5aabecc7-229f2"
 46 verbose lastModified Fri, 16 Mar 2018 16:11:51 GMT
 47 http request GET https://registry.npmjs.org/nan
 48 http 304 https://registry.npmjs.org/nan
-49 verbose headers { date: 'Mon, 26 Mar 2018 15:39:27 GMT',
+49 verbose headers { date: 'Mon, 26 Mar 2018 15:47:22 GMT',
 49 verbose headers   via: '1.1 varnish',
 49 verbose headers   'cache-control': 'max-age=300',
 49 verbose headers   etag: '"5aabecc7-229f2"',
-49 verbose headers   age: '10701',
+49 verbose headers   age: '11176',
 49 verbose headers   connection: 'keep-alive',
-49 verbose headers   'x-served-by': 'cache-jfk8125-JFK',
+49 verbose headers   'x-served-by': 'cache-jfk8149-JFK',
 49 verbose headers   'x-cache': 'HIT',
-49 verbose headers   'x-cache-hits': '60',
-49 verbose headers   'x-timer': 'S1522078768.888530,VS0,VE0',
+49 verbose headers   'x-cache-hits': '67',
+49 verbose headers   'x-timer': 'S1522079242.426543,VS0,VE0',
 49 verbose headers   vary: 'Accept-Encoding, Accept' }
 50 silly get cb [ 304,
-50 silly get   { date: 'Mon, 26 Mar 2018 15:39:27 GMT',
+50 silly get   { date: 'Mon, 26 Mar 2018 15:47:22 GMT',
 50 silly get     via: '1.1 varnish',
 50 silly get     'cache-control': 'max-age=300',
 50 silly get     etag: '"5aabecc7-229f2"',
-50 silly get     age: '10701',
+50 silly get     age: '11176',
 50 silly get     connection: 'keep-alive',
-50 silly get     'x-served-by': 'cache-jfk8125-JFK',
+50 silly get     'x-served-by': 'cache-jfk8149-JFK',
 50 silly get     'x-cache': 'HIT',
-50 silly get     'x-cache-hits': '60',
-50 silly get     'x-timer': 'S1522078768.888530,VS0,VE0',
+50 silly get     'x-cache-hits': '67',
+50 silly get     'x-timer': 'S1522079242.426543,VS0,VE0',
 50 silly get     vary: 'Accept-Encoding, Accept' } ]
 51 verbose etag https://registry.npmjs.org/nan from cache
 52 verbose get saving nan to /home/trtls/.npm/registry.npmjs.org/nan/.cache.json
 53 verbose correctMkdir /home/trtls/.npm correctMkdir not in flight; initializing
 54 http 304 https://registry.npmjs.org/bindings
-55 verbose headers { date: 'Mon, 26 Mar 2018 15:39:27 GMT',
+55 verbose headers { date: 'Mon, 26 Mar 2018 15:47:22 GMT',
 55 verbose headers   via: '1.1 varnish',
 55 verbose headers   'cache-control': 'max-age=300',
 55 verbose headers   etag: '"5a700cb7-4c53"',
-55 verbose headers   age: '0',
+55 verbose headers   age: '475',
 55 verbose headers   connection: 'keep-alive',
-55 verbose headers   'x-served-by': 'cache-jfk8127-JFK',
-55 verbose headers   'x-cache': 'MISS',
-55 verbose headers   'x-cache-hits': '0',
-55 verbose headers   'x-timer': 'S1522078768.873350,VS0,VE47',
+55 verbose headers   'x-served-by': 'cache-jfk8145-JFK',
+55 verbose headers   'x-cache': 'HIT',
+55 verbose headers   'x-cache-hits': '1',
+55 verbose headers   'x-timer': 'S1522079242.428118,VS0,VE0',
 55 verbose headers   vary: 'Accept-Encoding, Accept' }
 56 silly get cb [ 304,
-56 silly get   { date: 'Mon, 26 Mar 2018 15:39:27 GMT',
+56 silly get   { date: 'Mon, 26 Mar 2018 15:47:22 GMT',
 56 silly get     via: '1.1 varnish',
 56 silly get     'cache-control': 'max-age=300',
 56 silly get     etag: '"5a700cb7-4c53"',
-56 silly get     age: '0',
+56 silly get     age: '475',
 56 silly get     connection: 'keep-alive',
-56 silly get     'x-served-by': 'cache-jfk8127-JFK',
-56 silly get     'x-cache': 'MISS',
-56 silly get     'x-cache-hits': '0',
-56 silly get     'x-timer': 'S1522078768.873350,VS0,VE47',
+56 silly get     'x-served-by': 'cache-jfk8145-JFK',
+56 silly get     'x-cache': 'HIT',
+56 silly get     'x-cache-hits': '1',
+56 silly get     'x-timer': 'S1522079242.428118,VS0,VE0',
 56 silly get     vary: 'Accept-Encoding, Accept' } ]
 57 verbose etag https://registry.npmjs.org/bindings from cache
 58 verbose get saving bindings to /home/trtls/.npm/registry.npmjs.org/bindings/.cache.json
-59 verbose correctMkdir /home/trtls/.npm correctMkdir not in flight; initializing
+59 verbose correctMkdir /home/trtls/.npm correctMkdir already in flight; waiting
 60 silly addNameRange number 2 { name: 'bindings', range: '*', hasData: true }
 61 silly addNameRange versions [ 'bindings',
 61 silly addNameRange   [ '0.0.1',

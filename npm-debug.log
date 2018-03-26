@@ -1,0 +1,459 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/trtls/.nvm/v0.10.48/bin/node',
+1 verbose cli   '/home/trtls/.nvm/v0.10.48/bin/npm',
+1 verbose cli   'i' ]
+2 info using npm@2.15.1
+3 info using node@v0.10.48
+4 verbose readDependencies loading dependencies from /home/trtls/trtls/node-pty/nodecn/cn/package.json
+5 warn package.json cryptonote-util@0.0.4 No license field.
+6 verbose install where, deps [ '/home/trtls/trtls/node-pty/nodecn/cn',
+6 verbose install   [ 'bindings', 'nan' ] ]
+7 verbose install where, peers [ '/home/trtls/trtls/node-pty/nodecn/cn', [] ]
+8 verbose installManyTop reading for lifecycle /home/trtls/trtls/node-pty/nodecn/cn/package.json
+9 info preinstall cryptonote-util@0.0.4
+10 verbose readDependencies loading dependencies from /home/trtls/trtls/node-pty/nodecn/cn/package.json
+11 silly cache add args [ 'bindings@*', null ]
+12 verbose cache add spec bindings@*
+13 silly cache add args [ 'nan@^2.0.0', null ]
+14 verbose cache add spec nan@^2.0.0
+15 silly cache add parsed spec { raw: 'bindings@*',
+15 silly cache add   scope: null,
+15 silly cache add   name: 'bindings',
+15 silly cache add   rawSpec: '*',
+15 silly cache add   spec: '*',
+15 silly cache add   type: 'range' }
+16 silly addNamed bindings@*
+17 verbose addNamed "*" is a valid semver range for bindings
+18 silly addNameRange { name: 'bindings', range: '*', hasData: false }
+19 silly mapToRegistry name bindings
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry data { raw: 'bindings',
+22 silly mapToRegistry   scope: null,
+22 silly mapToRegistry   name: 'bindings',
+22 silly mapToRegistry   rawSpec: '',
+22 silly mapToRegistry   spec: 'latest',
+22 silly mapToRegistry   type: 'tag' }
+23 silly mapToRegistry uri https://registry.npmjs.org/bindings
+24 verbose addNameRange registry:https://registry.npmjs.org/bindings not in flight; fetching
+25 silly cache add parsed spec { raw: 'nan@^2.0.0',
+25 silly cache add   scope: null,
+25 silly cache add   name: 'nan',
+25 silly cache add   rawSpec: '^2.0.0',
+25 silly cache add   spec: '>=2.0.0 <3.0.0',
+25 silly cache add   type: 'range' }
+26 silly addNamed nan@>=2.0.0 <3.0.0
+27 verbose addNamed ">=2.0.0 <3.0.0" is a valid semver range for nan
+28 silly addNameRange { name: 'nan', range: '>=2.0.0 <3.0.0', hasData: false }
+29 silly mapToRegistry name nan
+30 silly mapToRegistry using default registry
+31 silly mapToRegistry registry https://registry.npmjs.org/
+32 silly mapToRegistry data { raw: 'nan',
+32 silly mapToRegistry   scope: null,
+32 silly mapToRegistry   name: 'nan',
+32 silly mapToRegistry   rawSpec: '',
+32 silly mapToRegistry   spec: 'latest',
+32 silly mapToRegistry   type: 'tag' }
+33 silly mapToRegistry uri https://registry.npmjs.org/nan
+34 verbose addNameRange registry:https://registry.npmjs.org/nan not in flight; fetching
+35 verbose request uri https://registry.npmjs.org/bindings
+36 verbose request no auth needed
+37 info attempt registry request try #1 at 15:39:27
+38 verbose request id 85286c0efa27883f
+39 verbose etag "5a700cb7-4c53"
+40 verbose lastModified Tue, 30 Jan 2018 6:12:07 GMT
+41 http request GET https://registry.npmjs.org/bindings
+42 verbose request uri https://registry.npmjs.org/nan
+43 verbose request no auth needed
+44 info attempt registry request try #1 at 15:39:27
+45 verbose etag "5aabecc7-229f2"
+46 verbose lastModified Fri, 16 Mar 2018 16:11:51 GMT
+47 http request GET https://registry.npmjs.org/nan
+48 http 304 https://registry.npmjs.org/nan
+49 verbose headers { date: 'Mon, 26 Mar 2018 15:39:27 GMT',
+49 verbose headers   via: '1.1 varnish',
+49 verbose headers   'cache-control': 'max-age=300',
+49 verbose headers   etag: '"5aabecc7-229f2"',
+49 verbose headers   age: '10701',
+49 verbose headers   connection: 'keep-alive',
+49 verbose headers   'x-served-by': 'cache-jfk8125-JFK',
+49 verbose headers   'x-cache': 'HIT',
+49 verbose headers   'x-cache-hits': '60',
+49 verbose headers   'x-timer': 'S1522078768.888530,VS0,VE0',
+49 verbose headers   vary: 'Accept-Encoding, Accept' }
+50 silly get cb [ 304,
+50 silly get   { date: 'Mon, 26 Mar 2018 15:39:27 GMT',
+50 silly get     via: '1.1 varnish',
+50 silly get     'cache-control': 'max-age=300',
+50 silly get     etag: '"5aabecc7-229f2"',
+50 silly get     age: '10701',
+50 silly get     connection: 'keep-alive',
+50 silly get     'x-served-by': 'cache-jfk8125-JFK',
+50 silly get     'x-cache': 'HIT',
+50 silly get     'x-cache-hits': '60',
+50 silly get     'x-timer': 'S1522078768.888530,VS0,VE0',
+50 silly get     vary: 'Accept-Encoding, Accept' } ]
+51 verbose etag https://registry.npmjs.org/nan from cache
+52 verbose get saving nan to /home/trtls/.npm/registry.npmjs.org/nan/.cache.json
+53 verbose correctMkdir /home/trtls/.npm correctMkdir not in flight; initializing
+54 http 304 https://registry.npmjs.org/bindings
+55 verbose headers { date: 'Mon, 26 Mar 2018 15:39:27 GMT',
+55 verbose headers   via: '1.1 varnish',
+55 verbose headers   'cache-control': 'max-age=300',
+55 verbose headers   etag: '"5a700cb7-4c53"',
+55 verbose headers   age: '0',
+55 verbose headers   connection: 'keep-alive',
+55 verbose headers   'x-served-by': 'cache-jfk8127-JFK',
+55 verbose headers   'x-cache': 'MISS',
+55 verbose headers   'x-cache-hits': '0',
+55 verbose headers   'x-timer': 'S1522078768.873350,VS0,VE47',
+55 verbose headers   vary: 'Accept-Encoding, Accept' }
+56 silly get cb [ 304,
+56 silly get   { date: 'Mon, 26 Mar 2018 15:39:27 GMT',
+56 silly get     via: '1.1 varnish',
+56 silly get     'cache-control': 'max-age=300',
+56 silly get     etag: '"5a700cb7-4c53"',
+56 silly get     age: '0',
+56 silly get     connection: 'keep-alive',
+56 silly get     'x-served-by': 'cache-jfk8127-JFK',
+56 silly get     'x-cache': 'MISS',
+56 silly get     'x-cache-hits': '0',
+56 silly get     'x-timer': 'S1522078768.873350,VS0,VE47',
+56 silly get     vary: 'Accept-Encoding, Accept' } ]
+57 verbose etag https://registry.npmjs.org/bindings from cache
+58 verbose get saving bindings to /home/trtls/.npm/registry.npmjs.org/bindings/.cache.json
+59 verbose correctMkdir /home/trtls/.npm correctMkdir not in flight; initializing
+60 silly addNameRange number 2 { name: 'bindings', range: '*', hasData: true }
+61 silly addNameRange versions [ 'bindings',
+61 silly addNameRange   [ '0.0.1',
+61 silly addNameRange     '0.1.0',
+61 silly addNameRange     '0.1.1',
+61 silly addNameRange     '0.2.0',
+61 silly addNameRange     '0.2.1',
+61 silly addNameRange     '0.2.2',
+61 silly addNameRange     '0.2.3',
+61 silly addNameRange     '0.2.4',
+61 silly addNameRange     '0.3.0',
+61 silly addNameRange     '0.4.0',
+61 silly addNameRange     '1.0.0',
+61 silly addNameRange     '1.1.0',
+61 silly addNameRange     '1.1.1',
+61 silly addNameRange     '1.2.0',
+61 silly addNameRange     '1.2.1',
+61 silly addNameRange     '1.3.0' ] ]
+62 silly addNamed bindings@1.3.0
+63 verbose addNamed "1.3.0" is a plain semver version for bindings
+64 silly addNameRange number 2 { name: 'nan', range: '>=2.0.0 <3.0.0', hasData: true }
+65 silly addNameRange versions [ 'nan',
+65 silly addNameRange   [ '0.3.0-wip',
+65 silly addNameRange     '0.3.0-wip2',
+65 silly addNameRange     '0.3.0',
+65 silly addNameRange     '0.3.1',
+65 silly addNameRange     '0.3.2',
+65 silly addNameRange     '0.4.0',
+65 silly addNameRange     '0.4.1',
+65 silly addNameRange     '0.4.2',
+65 silly addNameRange     '0.4.3',
+65 silly addNameRange     '0.4.4',
+65 silly addNameRange     '0.5.0',
+65 silly addNameRange     '0.5.1',
+65 silly addNameRange     '0.5.2',
+65 silly addNameRange     '0.6.0',
+65 silly addNameRange     '0.7.0',
+65 silly addNameRange     '0.7.1',
+65 silly addNameRange     '0.8.0',
+65 silly addNameRange     '1.0.0',
+65 silly addNameRange     '1.1.0',
+65 silly addNameRange     '1.1.1',
+65 silly addNameRange     '1.1.2',
+65 silly addNameRange     '1.2.0',
+65 silly addNameRange     '1.3.0',
+65 silly addNameRange     '1.4.0',
+65 silly addNameRange     '1.4.1',
+65 silly addNameRange     '1.5.0',
+65 silly addNameRange     '1.4.2',
+65 silly addNameRange     '1.4.3',
+65 silly addNameRange     '1.5.1',
+65 silly addNameRange     '1.5.2',
+65 silly addNameRange     '1.6.0',
+65 silly addNameRange     '1.5.3',
+65 silly addNameRange     '1.6.1',
+65 silly addNameRange     '1.6.2',
+65 silly addNameRange     '1.7.0',
+65 silly addNameRange     '1.8.0',
+65 silly addNameRange     '1.8.1',
+65 silly addNameRange     '1.8.2',
+65 silly addNameRange     '1.8.3',
+65 silly addNameRange     '1.8.4',
+65 silly addNameRange     '1.9.0',
+65 silly addNameRange     '2.0.0',
+65 silly addNameRange     '2.0.1',
+65 silly addNameRange     '2.0.2',
+65 silly addNameRange     '2.0.3',
+65 silly addNameRange     '2.0.4',
+65 silly addNameRange     '2.0.5',
+65 silly addNameRange     '2.0.6',
+65 silly addNameRange     '2.0.7',
+65 silly addNameRange     '2.0.8',
+65 silly addNameRange     '2.0.9',
+65 silly addNameRange     '2.1.0',
+65 silly addNameRange     '2.2.0',
+65 silly addNameRange     '2.2.1',
+65 silly addNameRange     '2.3.0',
+65 silly addNameRange     '2.3.1',
+65 silly addNameRange     '2.3.2',
+65 silly addNameRange     '2.3.3',
+65 silly addNameRange     '2.3.4',
+65 silly addNameRange     '2.3.5',
+65 silly addNameRange     '2.4.0',
+65 silly addNameRange     '2.5.0',
+65 silly addNameRange     '2.5.1',
+65 silly addNameRange     '2.6.0',
+65 silly addNameRange     '2.6.1',
+65 silly addNameRange     '2.6.2',
+65 silly addNameRange     '2.7.0',
+65 silly addNameRange     '2.8.0',
+65 silly addNameRange     '2.9.1',
+65 silly addNameRange     '2.9.2',
+65 silly addNameRange     '2.10.0' ] ]
+66 silly addNamed nan@2.10.0
+67 verbose addNamed "2.10.0" is a plain semver version for nan
+68 silly cache afterAdd bindings@1.3.0
+69 verbose afterAdd /home/trtls/.npm/bindings/1.3.0/package/package.json not in flight; writing
+70 verbose correctMkdir /home/trtls/.npm correctMkdir not in flight; initializing
+71 silly cache afterAdd nan@2.10.0
+72 verbose afterAdd /home/trtls/.npm/nan/2.10.0/package/package.json not in flight; writing
+73 verbose correctMkdir /home/trtls/.npm correctMkdir not in flight; initializing
+74 verbose afterAdd /home/trtls/.npm/bindings/1.3.0/package/package.json written
+75 verbose afterAdd /home/trtls/.npm/nan/2.10.0/package/package.json written
+76 silly install resolved [ { name: 'bindings',
+76 silly install resolved     description: 'Helper module for loading your native module\'s .node file',
+76 silly install resolved     keywords: [ 'native', 'addon', 'bindings', 'gyp', 'waf', 'c', 'c++' ],
+76 silly install resolved     version: '1.3.0',
+76 silly install resolved     author:
+76 silly install resolved      { name: 'Nathan Rajlich',
+76 silly install resolved        email: 'nathan@tootallnate.net',
+76 silly install resolved        url: 'http://tootallnate.net' },
+76 silly install resolved     repository:
+76 silly install resolved      { type: 'git',
+76 silly install resolved        url: 'git://github.com/TooTallNate/node-bindings.git' },
+76 silly install resolved     main: './bindings.js',
+76 silly install resolved     bugs: { url: 'https://github.com/TooTallNate/node-bindings/issues' },
+76 silly install resolved     homepage: 'https://github.com/TooTallNate/node-bindings',
+76 silly install resolved     license: 'MIT',
+76 silly install resolved     gitHead: '7fd065ee85386ad3d074d2506e03abe8f9b1588b',
+76 silly install resolved     _id: 'bindings@1.3.0',
+76 silly install resolved     _npmVersion: '5.0.3',
+76 silly install resolved     _nodeVersion: '8.1.3',
+76 silly install resolved     _npmUser: { name: 'tootallnate', email: 'nathan@tootallnate.net' },
+76 silly install resolved     dist:
+76 silly install resolved      { integrity: 'sha512-DpLh5EzMR2kzvX1KIlVC0VkC3iZtHKTgdtZ0a3pglBZdaQFjt5S9g9xd1lE+YvXyfd6mtCeRnrUfOLYiTMlNSw==',
+76 silly install resolved        shasum: 'b346f6ecf6a95f5a815c5839fc7cdb22502f1ed7',
+76 silly install resolved        tarball: 'https://registry.npmjs.org/bindings/-/bindings-1.3.0.tgz' },
+76 silly install resolved     maintainers: [ [Object] ],
+76 silly install resolved     _npmOperationalInternal:
+76 silly install resolved      { host: 's3://npm-registry-packages',
+76 silly install resolved        tmp: 'tmp/bindings-1.3.0.tgz_1500923768710_0.3334669852629304' },
+76 silly install resolved     directories: {},
+76 silly install resolved     _shasum: 'b346f6ecf6a95f5a815c5839fc7cdb22502f1ed7',
+76 silly install resolved     _resolved: 'https://registry.npmjs.org/bindings/-/bindings-1.3.0.tgz',
+76 silly install resolved     _from: 'bindings@*',
+76 silly install resolved     readme: 'ERROR: No README data found!' },
+76 silly install resolved   { name: 'nan',
+76 silly install resolved     version: '2.10.0',
+76 silly install resolved     description: 'Native Abstractions for Node.js: C++ header for Node 0.8 -> 9 compatibility',
+76 silly install resolved     main: 'include_dirs.js',
+76 silly install resolved     repository: { type: 'git', url: 'git://github.com/nodejs/nan.git' },
+76 silly install resolved     scripts:
+76 silly install resolved      { test: 'tap --gc --stderr test/js/*-test.js',
+76 silly install resolved        'rebuild-tests': 'node-gyp rebuild --msvs_version=2015 --directory test',
+76 silly install resolved        docs: 'doc/.build.sh' },
+76 silly install resolved     contributors:
+76 silly install resolved      [ [Object],
+76 silly install resolved        [Object],
+76 silly install resolved        [Object],
+76 silly install resolved        [Object],
+76 silly install resolved        [Object],
+76 silly install resolved        [Object],
+76 silly install resolved        [Object],
+76 silly install resolved        [Object] ],
+76 silly install resolved     devDependencies:
+76 silly install resolved      { bindings: '~1.2.1',
+76 silly install resolved        commander: '^2.8.1',
+76 silly install resolved        glob: '^5.0.14',
+76 silly install resolved        request: '=2.81.0',
+76 silly install resolved        'node-gyp': '~3.6.2',
+76 silly install resolved        'readable-stream': '^2.1.4',
+76 silly install resolved        tap: '~0.7.1',
+76 silly install resolved        xtend: '~4.0.0' },
+76 silly install resolved     license: 'MIT',
+76 silly install resolved     bugs: { url: 'https://github.com/nodejs/nan/issues' },
+76 silly install resolved     homepage: 'https://github.com/nodejs/nan#readme',
+76 silly install resolved     _id: 'nan@2.10.0',
+76 silly install resolved     _npmVersion: '5.6.0',
+76 silly install resolved     _nodeVersion: '9.6.0',
+76 silly install resolved     _npmUser: { name: 'kkoopa', email: 'bbyholm@abo.fi' },
+76 silly install resolved     dist:
+76 silly install resolved      { integrity: 'sha512-bAdJv7fBLhWC+/Bls0Oza+mvTaNQtP+1RyhhhvD95pgUJz6XM5IzgmxOkItJ9tkoCiplvAnXI1tNmmUD/eScyA==',
+76 silly install resolved        shasum: '96d0cd610ebd58d4b4de9cc0c6828cda99c7548f',
+76 silly install resolved        tarball: 'https://registry.npmjs.org/nan/-/nan-2.10.0.tgz',
+76 silly install resolved        fileCount: 46,
+76 silly install resolved        unpackedSize: 409953 },
+76 silly install resolved     maintainers: [ [Object], [Object] ],
+76 silly install resolved     directories: {},
+76 silly install resolved     _npmOperationalInternal:
+76 silly install resolved      { host: 's3://npm-registry-packages',
+76 silly install resolved        tmp: 'tmp/nan_2.10.0_1521216708687_0.31611161513830033' },
+76 silly install resolved     _shasum: '96d0cd610ebd58d4b4de9cc0c6828cda99c7548f',
+76 silly install resolved     _resolved: 'https://registry.npmjs.org/nan/-/nan-2.10.0.tgz',
+76 silly install resolved     _from: 'nan@>=2.0.0 <3.0.0',
+76 silly install resolved     readme: 'ERROR: No README data found!' } ]
+77 info install bindings@1.3.0 into /home/trtls/trtls/node-pty/nodecn/cn
+78 info install nan@2.10.0 into /home/trtls/trtls/node-pty/nodecn/cn
+79 info installOne bindings@1.3.0
+80 verbose installOne of bindings to /home/trtls/trtls/node-pty/nodecn/cn not in flight; installing
+81 verbose correctMkdir /home/trtls/.npm/_locks correctMkdir not in flight; initializing
+82 info installOne nan@2.10.0
+83 verbose installOne of nan to /home/trtls/trtls/node-pty/nodecn/cn not in flight; installing
+84 verbose correctMkdir /home/trtls/.npm/_locks correctMkdir already in flight; waiting
+85 verbose lock using /home/trtls/.npm/_locks/bindings-5fbee8a380c9d295.lock for /home/trtls/trtls/node-pty/nodecn/cn/node_modules/bindings
+86 verbose lock using /home/trtls/.npm/_locks/nan-d2b2743f8a22e206.lock for /home/trtls/trtls/node-pty/nodecn/cn/node_modules/nan
+87 silly install write writing bindings 1.3.0 to /home/trtls/trtls/node-pty/nodecn/cn/node_modules/bindings
+88 silly install write writing nan 2.10.0 to /home/trtls/trtls/node-pty/nodecn/cn/node_modules/nan
+89 verbose unbuild node_modules/bindings
+90 verbose unbuild node_modules/nan
+91 silly gentlyRm /home/trtls/trtls/node-pty/nodecn/cn/node_modules/bindings is being purged from base /home/trtls/trtls/node-pty/nodecn/cn
+92 verbose gentlyRm don't care about contents; nuking /home/trtls/trtls/node-pty/nodecn/cn/node_modules/bindings
+93 silly gentlyRm /home/trtls/trtls/node-pty/nodecn/cn/node_modules/nan is being purged from base /home/trtls/trtls/node-pty/nodecn/cn
+94 verbose gentlyRm don't care about contents; nuking /home/trtls/trtls/node-pty/nodecn/cn/node_modules/nan
+95 verbose tar unpack /home/trtls/.npm/bindings/1.3.0/package.tgz
+96 verbose tar unpacking to /home/trtls/trtls/node-pty/nodecn/cn/node_modules/bindings
+97 silly gentlyRm /home/trtls/trtls/node-pty/nodecn/cn/node_modules/bindings is being purged
+98 verbose gentlyRm don't care about contents; nuking /home/trtls/trtls/node-pty/nodecn/cn/node_modules/bindings
+99 verbose tar unpack /home/trtls/.npm/nan/2.10.0/package.tgz
+100 verbose tar unpacking to /home/trtls/trtls/node-pty/nodecn/cn/node_modules/nan
+101 silly gentlyRm /home/trtls/trtls/node-pty/nodecn/cn/node_modules/nan is being purged
+102 verbose gentlyRm don't care about contents; nuking /home/trtls/trtls/node-pty/nodecn/cn/node_modules/nan
+103 silly gunzTarPerm modes [ '775', '664' ]
+104 silly gunzTarPerm modes [ '775', '664' ]
+105 silly gunzTarPerm extractEntry package.json
+106 silly gunzTarPerm modified mode [ 'package.json', 420, 436 ]
+107 silly gunzTarPerm extractEntry package.json
+108 silly gunzTarPerm extractEntry README.md
+109 silly gunzTarPerm modified mode [ 'README.md', 420, 436 ]
+110 silly gunzTarPerm extractEntry bindings.js
+111 silly gunzTarPerm modified mode [ 'bindings.js', 420, 436 ]
+112 silly gunzTarPerm extractEntry CHANGELOG.md
+113 silly gunzTarPerm extractEntry include_dirs.js
+114 silly gunzTarPerm extractEntry LICENSE.md
+115 silly gunzTarPerm extractEntry nan_callbacks_12_inl.h
+116 silly gunzTarPerm extractEntry nan_callbacks_pre_12_inl.h
+117 silly gunzTarPerm extractEntry nan_callbacks.h
+118 verbose write writing to /home/trtls/trtls/node-pty/nodecn/cn/node_modules/bindings/package.json
+119 info preinstall bindings@1.3.0
+120 verbose readDependencies loading dependencies from /home/trtls/trtls/node-pty/nodecn/cn/node_modules/bindings/package.json
+121 silly gunzTarPerm extractEntry nan_converters_43_inl.h
+122 silly gunzTarPerm extractEntry nan_converters_pre_43_inl.h
+123 verbose readDependencies loading dependencies from /home/trtls/trtls/node-pty/nodecn/cn/node_modules/bindings/package.json
+124 silly gunzTarPerm extractEntry nan_converters.h
+125 silly gunzTarPerm extractEntry nan_define_own_property_helper.h
+126 silly install resolved []
+127 verbose about to build /home/trtls/trtls/node-pty/nodecn/cn/node_modules/bindings
+128 info build /home/trtls/trtls/node-pty/nodecn/cn/node_modules/bindings
+129 info linkStuff bindings@1.3.0
+130 silly linkStuff bindings@1.3.0 has /home/trtls/trtls/node-pty/nodecn/cn/node_modules as its parent node_modules
+131 silly gunzTarPerm extractEntry nan_implementation_12_inl.h
+132 silly gunzTarPerm extractEntry nan_implementation_pre_12_inl.h
+133 silly gunzTarPerm extractEntry nan_json.h
+134 verbose linkBins bindings@1.3.0
+135 verbose linkMans bindings@1.3.0
+136 verbose rebuildBundles bindings@1.3.0
+137 info install bindings@1.3.0
+138 info postinstall bindings@1.3.0
+139 verbose unlock done using /home/trtls/.npm/_locks/bindings-5fbee8a380c9d295.lock for /home/trtls/trtls/node-pty/nodecn/cn/node_modules/bindings
+140 silly gunzTarPerm extractEntry nan_maybe_43_inl.h
+141 silly gunzTarPerm extractEntry nan_maybe_pre_43_inl.h
+142 silly gunzTarPerm extractEntry nan_new.h
+143 silly gunzTarPerm extractEntry nan_object_wrap.h
+144 silly gunzTarPerm extractEntry nan_persistent_12_inl.h
+145 silly gunzTarPerm extractEntry nan_persistent_pre_12_inl.h
+146 silly gunzTarPerm extractEntry nan_private.h
+147 silly gunzTarPerm extractEntry nan_string_bytes.h
+148 silly gunzTarPerm extractEntry nan_typedarray_contents.h
+149 silly gunzTarPerm extractEntry nan_weak.h
+150 silly gunzTarPerm extractEntry nan.h
+151 silly gunzTarPerm extractEntry README.md
+152 silly gunzTarPerm extractEntry doc/asyncworker.md
+153 silly gunzTarPerm extractEntry doc/buffers.md
+154 silly gunzTarPerm extractEntry doc/callback.md
+155 silly gunzTarPerm extractEntry doc/converters.md
+156 silly gunzTarPerm extractEntry doc/errors.md
+157 silly gunzTarPerm extractEntry doc/json.md
+158 silly gunzTarPerm extractEntry doc/maybe_types.md
+159 silly gunzTarPerm extractEntry doc/methods.md
+160 silly gunzTarPerm extractEntry doc/new.md
+161 silly gunzTarPerm extractEntry doc/node_misc.md
+162 silly gunzTarPerm extractEntry doc/object_wrappers.md
+163 silly gunzTarPerm extractEntry doc/persistent.md
+164 silly gunzTarPerm extractEntry doc/scopes.md
+165 silly gunzTarPerm extractEntry doc/script.md
+166 silly gunzTarPerm extractEntry doc/string_bytes.md
+167 silly gunzTarPerm extractEntry doc/v8_internals.md
+168 silly gunzTarPerm extractEntry doc/v8_misc.md
+169 silly gunzTarPerm extractEntry tools/1to2.js
+170 silly gunzTarPerm extractEntry tools/package.json
+171 silly gunzTarPerm extractEntry tools/README.md
+172 verbose write writing to /home/trtls/trtls/node-pty/nodecn/cn/node_modules/nan/package.json
+173 info preinstall nan@2.10.0
+174 verbose readDependencies loading dependencies from /home/trtls/trtls/node-pty/nodecn/cn/node_modules/nan/package.json
+175 verbose readDependencies loading dependencies from /home/trtls/trtls/node-pty/nodecn/cn/node_modules/nan/package.json
+176 silly install resolved []
+177 verbose about to build /home/trtls/trtls/node-pty/nodecn/cn/node_modules/nan
+178 info build /home/trtls/trtls/node-pty/nodecn/cn/node_modules/nan
+179 info linkStuff nan@2.10.0
+180 silly linkStuff nan@2.10.0 has /home/trtls/trtls/node-pty/nodecn/cn/node_modules as its parent node_modules
+181 verbose linkBins nan@2.10.0
+182 verbose linkMans nan@2.10.0
+183 verbose rebuildBundles nan@2.10.0
+184 info install nan@2.10.0
+185 info postinstall nan@2.10.0
+186 verbose unlock done using /home/trtls/.npm/_locks/nan-d2b2743f8a22e206.lock for /home/trtls/trtls/node-pty/nodecn/cn/node_modules/nan
+187 info build /home/trtls/trtls/node-pty/nodecn/cn
+188 info linkStuff cryptonote-util@0.0.4
+189 silly linkStuff cryptonote-util@0.0.4 has /home/trtls/trtls/node-pty/nodecn as its parent node_modules
+190 verbose linkBins cryptonote-util@0.0.4
+191 verbose linkMans cryptonote-util@0.0.4
+192 verbose rebuildBundles cryptonote-util@0.0.4
+193 verbose rebuildBundles [ 'bindings', 'nan' ]
+194 info install cryptonote-util@0.0.4
+195 verbose unsafe-perm in lifecycle true
+196 info cryptonote-util@0.0.4 Failed to exec install script
+197 verbose stack Error: cryptonote-util@0.0.4 install: `node-gyp rebuild`
+197 verbose stack Exit status 1
+197 verbose stack     at EventEmitter.<anonymous> (/home/trtls/.nvm/v0.10.48/lib/node_modules/npm/lib/utils/lifecycle.js:217:16)
+197 verbose stack     at EventEmitter.emit (events.js:98:17)
+197 verbose stack     at ChildProcess.<anonymous> (/home/trtls/.nvm/v0.10.48/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+197 verbose stack     at ChildProcess.emit (events.js:98:17)
+197 verbose stack     at maybeClose (child_process.js:766:16)
+197 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:833:5)
+198 verbose pkgid cryptonote-util@0.0.4
+199 verbose cwd /home/trtls/trtls/node-pty/nodecn/cn
+200 error Linux 4.4.0-116-generic
+201 error argv "/home/trtls/.nvm/v0.10.48/bin/node" "/home/trtls/.nvm/v0.10.48/bin/npm" "i"
+202 error node v0.10.48
+203 error npm  v2.15.1
+204 error code ELIFECYCLE
+205 error cryptonote-util@0.0.4 install: `node-gyp rebuild`
+205 error Exit status 1
+206 error Failed at the cryptonote-util@0.0.4 install script 'node-gyp rebuild'.
+206 error This is most likely a problem with the cryptonote-util package,
+206 error not with npm itself.
+206 error Tell the author that this fails on your system:
+206 error     node-gyp rebuild
+206 error You can get information on how to open an issue for this project with:
+206 error     npm bugs cryptonote-util
+206 error Or if that isn't available, you can get their info via:
+206 error
+206 error     npm owner ls cryptonote-util
+206 error There is likely additional logging output above.
+207 verbose exit [ 1, true ]
